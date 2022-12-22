@@ -1,0 +1,210 @@
+/* #bloc_page{
+  max-width: 1920px;
+  margin: auto;
+} */
+
+body {
+  font-family: "comic sans ms";
+  background-color:rgb(32, 65, 109);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: #f53333;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Les liens de ce menu déroulant ne sont pas fonctionnels, c'est simplemement pour montrer l'exemple du dropdown mais sans créer les pages qui y sont présentées */
+  
+.menu{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }  
+  .dropbtn {
+    background-color: #f53333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+  form {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 15px;
+  }
+  input {
+    padding: 4px 10px;
+    border: 0;
+    font-size: 16px;
+  }
+  .search {
+    display: flex;
+    justify-content: end;
+    width: 70%;
+  }
+  .submit {
+    width: 100px;
+    background-color: #1c87c9;
+    color: #ffffff;
+  }
+  
+a{
+  text-decoration: none;
+  color: white;
+}
+
+main{
+  background-image: url(dragon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+}
+
+.banniere{
+  background-image: url("banniere.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.actu{
+  border: solid;
+  margin-right: 10px;  
+  width: 60%;
+}
+
+.article{
+  border: solid;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.contenu{
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 10px 50px 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.premier_article{
+  display: flex;
+  margin: 10px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.premier_article_lien{
+  display: flex;
+  justify-content: space-between;
+}
+
+.texte_premier_article{
+  color: #e9b937;
+  margin-left: 10px;
+text-align: justify;}
+
+.event{
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  width: 30%;
+  /* margin: ; */
+}
+.salon{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bc-grey{
+  background-color: #3c3c3cab;
+  border-radius: 15px;
+}
+
+h2{
+  color: rgb(231, 73, 73);
+  display: flex;
+  justify-content: center;
+}
+
+/* #fighter{
+  object-fit: cover;
+} */
+
+h3{
+  display: flex;
+  justify-content: ;
+}
+
+p{
+  color: #e9b937;;
+}
+
+.basdepage{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 30%;	
+	margin: auto;
+}
+
+footer{
+	background-color: grey;
+}
+
+@media screen and (max-width:750px) {
+  .contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .actu{
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  .event{
+    width: 80%;
+  }
+}
