@@ -1,3 +1,77 @@
+.rechercher{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 15px;
+}
+
+form{
+  margin: 50px;
+  background-color: #3c3c3cab;
+  border: solid;
+  padding: 40px 60px;
+  border-radius: 10px;
+  min-width: 300px;
+}
+form h1{
+  color: #eb7371;
+  text-align:center;
+}
+form .social-media{
+  margin-top: -10px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+form .social-media p{
+  padding: 5px;
+  width: 20px;
+  margin-left: 10px;
+  border-radius: 100%;
+  border: 1px solid #545454;
+  text-align: center;
+  cursor:pointer;
+  color: #545454;
+}
+form p.choose-email{
+  text-align:center;
+}
+form .inputs {
+  display: flex;
+  flex-direction: column;
+}
+form .inputs input[type='email'], input[type='password']{
+  padding: 15px;
+  border:none;
+  border-radius: 5px;
+  background-color:#f2f2f2;
+  outline:none;
+  margin-bottom: 15px;
+}
+form p.inscription{
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #878787;
+}
+form p.inscription span{
+  color: #eb7371;
+}
+form button{
+  padding: 15px 25px;
+  border-radius: 5px;
+  border:none;
+  font-size: 15px;
+  color: #fff;
+  background-color: #eb7371;
+  outline:none;
+  cursor:pointer;
+}
+
+
+
+
+
+
 /* #bloc_page{
   max-width: 1920px;
   margin: auto;
@@ -18,6 +92,7 @@ header{
   background-color: #f53333;
   width: 100%;
   justify-content: space-between;
+  z-index: 2;
 }
 
 /* Les liens de ce menu déroulant ne sont pas fonctionnels, c'est simplemement pour montrer l'exemple du dropdown mais sans créer les pages qui y sont présentées */
@@ -28,47 +103,29 @@ header{
   width: 100%;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }  
-  .dropbtn {
+.dropbtn {
     background-color: #f53333;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
   }  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }  
+  
   .dropdown:hover .dropdown-content {
     display: block;
   }
   .dropdown:hover .dropbtn {
+    padding: 10px;
     background-color: #3e8e41;
   }
-  
-  form {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-right: 15px;
+
+
+
+  .submit{
+    border-radius: 10px;
   }
+
+
   input {
     padding: 4px 10px;
     border: 0;
@@ -78,6 +135,8 @@ header{
     display: flex;
     justify-content: end;
     width: 70%;
+    border-radius: 10px;
+    margin-right: 10px;
   }
   .submit {
     width: 100px;
@@ -96,6 +155,7 @@ main{
   background-size: cover;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .banniere{
@@ -109,8 +169,18 @@ main{
 
 .actu{
   border: solid;
-  margin-right: 10px;  
-  width: 60%;
+  margin-right: 10%;  
+  width: 80%;
+}
+
+.contenu_actu2{
+  display: flex;
+  justify-content: center;
+  margin: 50px 10px 50px 10px;
+  width: 89%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: 0;
 }
 
 .article{
@@ -135,33 +205,92 @@ main{
   justify-content: space-between;
 }
 
-.premier_article_lien{
+.site_salon_manga{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .texte_premier_article{
   color: #e9b937;
   margin-left: 10px;
 text-align: justify;}
 
+.premier_article_lien{
+  display: flex;
+  justify-content: space-between;
+}
+
 .event{
   display: flex;
   flex-direction: column;
   border: solid;
   width: 30%;
+  text-align: center;
   /* margin: ; */
 }
+
 .salon{
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+ 
+.salon_paris {
+  width: auto;
+  height: auto;
+  margin: auto;
+  margin-top: auto;
+  position: relative;
+}
+
+/* fond opaque + texte au mileu en hover */
+
+img {
+ 
+  transition: .5s ease;
+
+}
+
+
+.visiter {
+  transition: .5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text {
+  background-color: #a8c738;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  padding: 5px 5px;
+  opacity: 0; 
+}
+
+
+.salon_paris:hover img {
+  opacity: 0.3;
+}
+
+
+.salon_paris:hover .text {
+  opacity: 1;
+} 
+
+
 .bc-grey{
   background-color: #3c3c3cab;
   border-radius: 15px;
 }
+
+
 
 h2{
   color: rgb(231, 73, 73);
@@ -169,13 +298,13 @@ h2{
   justify-content: center;
 }
 
-/* #fighter{
-  object-fit: cover;
-} */
+#fighter{
+  height: 40%;
+  width: 100%;
+}
 
 h3{
   display: flex;
-  justify-content: ;
 }
 
 p{
@@ -193,6 +322,16 @@ p{
 footer{
 	background-color: grey;
 }
+
+.contenu_actu{
+  display: flex;
+  justify-content: center;
+  margin: 50px 10px 50px 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 @media screen and (max-width:750px) {
   .contenu{
