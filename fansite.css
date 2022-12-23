@@ -5,6 +5,7 @@
   margin-right: 15px;
 }
 
+/* debut inscription */
 form{
   margin: 50px;
   background-color: #3c3c3cab;
@@ -14,7 +15,7 @@ form{
   min-width: 300px;
 }
 form h1{
-  color: #eb7371;
+  color: #3e8e41;
   text-align:center;
 }
 form .social-media{
@@ -62,15 +63,11 @@ form button{
   border:none;
   font-size: 15px;
   color: #fff;
-  background-color: #eb7371;
+  background-color: #3e8e41;
   outline:none;
   cursor:pointer;
 }
-
-
-
-
-
+/* fin inscription */
 
 /* #bloc_page{
   max-width: 1920px;
@@ -79,7 +76,7 @@ form button{
 
 body {
   font-family: "comic sans ms";
-  background-color:rgb(32, 65, 109);
+  /* background-color:rgb(32, 65, 109); */
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -95,6 +92,10 @@ header{
   z-index: 2;
 }
 
+/* .logo{
+  height: 50px;
+} */
+
 /* Les liens de ce menu déroulant ne sont pas fonctionnels, c'est simplemement pour montrer l'exemple du dropdown mais sans créer les pages qui y sont présentées */
   
 .menu{
@@ -104,6 +105,7 @@ header{
 }
 
 .dropbtn {
+    margin-top: 5px;
     background-color: #f53333;
     color: white;
     padding: 16px;
@@ -111,20 +113,18 @@ header{
     border: none;
   }  
   
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover {
     display: block;
   }
   .dropdown:hover .dropbtn {
     padding: 10px;
     background-color: #3e8e41;
+    border-radius: 10px;
   }
-
-
 
   .submit{
     border-radius: 10px;
   }
-
 
   input {
     padding: 4px 10px;
@@ -144,9 +144,19 @@ header{
     color: #ffffff;
   }
   
+  header a, footer a{
+  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+}
+
 a{
   text-decoration: none;
-  color: white;
+}
+
+.lien_event{
+  font-style: italic;
+  color: black;
 }
 
 main{
@@ -159,6 +169,9 @@ main{
 }
 
 .banniere{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   background-image: url("banniere.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -173,14 +186,18 @@ main{
   width: 80%;
 }
 
+.actu2{
+  border: solid;
+  width: 80%;
+}
+
 .contenu_actu2{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 50px 10px 50px 10px;
   width: 89%;
   margin-left: auto;
   margin-right: auto;
-  margin-right: 0;
 }
 
 .article{
@@ -211,7 +228,6 @@ main{
   align-items: center;
 }
 
-
 .texte_premier_article{
   color: #e9b937;
   margin-left: 10px;
@@ -222,6 +238,7 @@ text-align: justify;}
   justify-content: space-between;
 }
 
+/* Les deux liens de salon ne sont pas animés de la même façon, volontairement, pour proposer plusieurs possibilités, au risque que ce ne soit pas cohérent sur ce coup-ci */
 .event{
   display: flex;
   flex-direction: column;
@@ -238,8 +255,7 @@ text-align: justify;}
   align-items: center;
 }
 
- 
-.salon_paris {
+ .salon_paris {
   width: auto;
   height: auto;
   margin: auto;
@@ -250,11 +266,8 @@ text-align: justify;}
 /* fond opaque + texte au mileu en hover */
 
 img {
- 
-  transition: .5s ease;
-
+   transition: .5s ease;
 }
-
 
 .visiter {
   transition: .5s ease;
@@ -274,33 +287,35 @@ img {
   opacity: 0; 
 }
 
-
 .salon_paris:hover img {
   opacity: 0.3;
 }
 
-
 .salon_paris:hover .text {
   opacity: 1;
 } 
-
+/* fin du lien en hover opaque */
 
 .bc-grey{
   background-color: #3c3c3cab;
   border-radius: 15px;
 }
+.banniere h1{
+  margin-bottom: 5px;
+}
+h1{
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(70, 33, 2);
+  text-align: center;
+  color: #e9b937;
+}
 
-
-
-h2{
+h2{  
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(70, 33, 2);
   color: rgb(231, 73, 73);
   display: flex;
   justify-content: center;
-}
-
-#fighter{
-  height: 40%;
-  width: 100%;
 }
 
 h3{
@@ -308,8 +323,18 @@ h3{
 }
 
 p{
-  color: #e9b937;;
+  color: #e9b937;
 }
+
+#fighter{
+ max-width: 40%;
+ height: auto;
+}
+/* 
+#fighter2{
+  display: flex;
+  max-width: 32%;
+} */
 
 .basdepage{
 	display: flex;
@@ -320,8 +345,11 @@ p{
 }
 
 footer{
-	background-color: grey;
+	background-color: rgb(73, 73, 73);
+  
 }
+i{
+color: red;}
 
 .contenu_actu{
   display: flex;
@@ -331,6 +359,62 @@ footer{
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* page evenement */
+table{
+  margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: solid;
+    display: flex;
+    justify-content: center;   
+  border-collapse: collapse;
+}
+
+th, td{
+  border: 4px solid black;
+  padding: 15px;
+}
+/* fin page event */
+
+/* page real */
+.contenu_realisation{
+  width: 90%;
+  display: flex;
+}
+/* fin page real */
+
+/* 
+tr:nth-child(even) {
+  background: rgb(179, 213, 247)} */
+
+.futurs{
+  background-color: #2aff316e;
+}
+.anciens{
+  background-color: #fa25256e;
+}
+
+.lien_event:hover{
+  /* font-size: 18px; */
+  transition-timing-function: 1; 
+  /* comment rendre le hover progressif ? */
+  /* opacity: 0.5; */
+  color: rgb(1, 33, 216);
+}
+
+.gras > th{
+  text-decoration: underline;
+  /* color: rgb(121, 17, 98); */
+  font-family: comic sans ms;
+  font-size: xx-large;
+}
+
+/* .tableau{
+width: 90%;
+} */
+/* fin page event */
 
 
 @media screen and (max-width:750px) {
