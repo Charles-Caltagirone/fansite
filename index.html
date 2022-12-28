@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dragon Ball fansite</title>
     <link rel="stylesheet" type="text/css" href="fansite.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -32,6 +32,10 @@
 		</div>
 
 		<div class="dropdown">
+			<button class="dropbtn"><a href="personnages.html"> • Personnages •</a></button>
+		  </div>
+
+		<div class="dropdown">
 			<button class="dropbtn"> <a href="connexion.html">• Connexion •</a></button>
 		  </div>
   </nav>
@@ -43,18 +47,17 @@
 </header>
 
 <div class="banniere">
-	<h1>TOUTES LES INFOS DRAGON BALL REUNIES</h1>
 </div>
 
-
 <main>
+	<!-- <h1>TOUTES LES INFOS DRAGON BALL REUNIES</h1> -->
+
 	<div class="contenu">
 		<div class="actu bc-grey">
 			<h2>Dernières actualités</h2>
 			<div class="premier_article">
-				<a href="https://fr.bandainamcoent.eu/dragon-ball/dragon-ball-fighterz" class="premier_article_lien" target="_blank">
-				<img id="fighter" src="jeu.jpg" alt="jeu fighter">
-				
+				<a href="https://fr.bandainamcoent.eu/dragon-ball/dragon-ball-fighterz" class="premier_article_lien" target="_blank">					
+				<img class="fighter" src="jeu.jpg" alt="jeu fighter">
 				<div class="texte_premier_article">
 					<h3>Dragon Ball Fighter Z est enfin disponible !</h3>
 					<p>Ne perdez pas plus de temps ! Bandai Namco Games vient de sortir sa toute dernière pépite. Gameplay qui revient aux sources mais avec des graphismes époustouflants, vous n'avez pas fini de prendre du plaisir !</p>
@@ -63,27 +66,31 @@
 			</div>
 
 			<div class="premier_article">
-				<iframe width="40%" src="https://www.youtube.com/embed/HoTuLE0bz08" title="Dragon Ball Héros épisode 1-9 VOSTFR Complet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="video" src="https://www.youtube.com/embed/HoTuLE0bz08" title="Dragon Ball Héros épisode 1-9 VOSTFR Complet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>					
+				</iframe>
 				<div class="texte_premier_article">
-					<h3>Le dernier épisode mis en ligne</h3>
-					<p>Ne perdez pas plus de temps ! Bandai Namco Games vient de sortir sa toute dernière pépite. Gameplay qui revient aux sources mais avec des graphismes époustouflants, vous n'avez pas fini de prendre du plaisir !</p>
+					<h3 class="episode"><a href="https://www.youtube.com/watch?v=HoTuLE0bz08" target="_blank">Le dernier épisode mis en ligne</a></h3>
+					<p>Voici l'épisode 9 de l'anime promotionnel Super Dragon Ball Heroes, mis en ligne aujourd'hui sur le site officiel. Ce neuvième épisode, qui a pour titre « Son Goku ressuscite ! Le conflit du plus fort et du plus fort ! » n'est disponible qu'en japonais, mais nous vous partagerons une version sous-titrées française dès qu'elle sera disponible.</p>
 				</div>
 
 			</div>
 		</div>
 
 		<div class="event bc-grey">
-			<h2>Evènements à venir</h2>
-			<div class="salon manga">
-				<a href="https://www.epinay-sur-seine.fr/events/salon-du-manga-2022/" class="site_salon_manga" target="_blank">
-				<img src="salon_manga.jpg" width="60%" alt="Salon du manga">
-				<p>16/04/2023 <br> Salon du Manga à Epinay</p>
-				</a>
+			<h2>Evènements à venir</h2>			
+			<div class="salon_paris">
+				<div class="manga">
+				<img src="salon_manga.jpg" width="50%">		
+				</div>
+				<div class="visiter">
+					<div class="text"> <a href="https://www.epinay-sur-seine.fr/events/salon-du-manga-2022/" target="_blank">Visiter le site</a></div>
+				</div>
+				<p>16/04/2023<br>Salon du Manga à Epinay</p>
 			</div>
 
+
 			<div class="salon_paris">
-				<img src="salon_jeu.png" width="50%">
-		
+				<img src="salon_jeu.png" width="50%">		
 				<div class="visiter">
 					<div class="text"> <a href="https://www.parisgamesweek.com/" target="_blank">Visiter le site</a></div>
 				</div>
@@ -101,17 +108,22 @@
 <footer>
 	<div class="basdepage">
 		<div class="rubriques">
+		<p> <a href="index.html">Accueil</a></p>
 		<p> <a href="actualite.html">Actualité</a></p>
+		</div>
+		<div class="rubriques">
 		<p> <a href="realisations.html">Réalisations</a></p>
 		<p> <a href="evenements.html">Evènements</a></p>
-		<a href="#"><i class="fa-brands fa-facebook"></i></a>
 		</div>
-
-		<div class="contact">
-		<p>(icones réseaux sociaux)</p>
+		<div class="rubriques">
+		<p> <a href="personnages.html">Personnages</a></p>
 		<p><a href="connexion.html">Connexion</a></p>
 		</div>
-
+		<div class="contact">
+		<p><a href="#"><i class="fa-brands fa-facebook"></i></a></p>
+		<p><a href="#"><i class="fa-brands fa-twitter"></i></a></p>
+		<p><a href="https://github.com/Charles-Caltagirone/fansite" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+		</div>
 	</div>
 </footer>    
 </div>

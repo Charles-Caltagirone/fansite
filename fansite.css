@@ -6,6 +6,7 @@
 }
 
 /* debut inscription */
+
 form{
   margin: 50px;
   background-color: #3c3c3cab;
@@ -15,7 +16,9 @@ form{
   min-width: 300px;
 }
 form h1{
-  color: #3e8e41;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(70, 33, 2);
+  color: rgb(231, 73, 73);
   text-align:center;
 }
 form .social-media{
@@ -24,19 +27,7 @@ form .social-media{
   flex-wrap:wrap;
   justify-content:center;
 }
-form .social-media p{
-  padding: 5px;
-  width: 20px;
-  margin-left: 10px;
-  border-radius: 100%;
-  border: 1px solid #545454;
-  text-align: center;
-  cursor:pointer;
-  color: #545454;
-}
-form p.choose-email{
-  text-align:center;
-}
+
 form .inputs {
   display: flex;
   flex-direction: column;
@@ -52,10 +43,14 @@ form .inputs input[type='email'], input[type='password']{
 form p.inscription{
   font-size: 14px;
   margin-bottom: 20px;
-  color: #878787;
+  color: black;
+  /* -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(70, 33, 2); */
 }
+
 form p.inscription span{
   color: #eb7371;
+  font-size: 1.5em;
 }
 form button{
   padding: 15px 25px;
@@ -86,7 +81,7 @@ header{
   position: fixed;
   display: flex;
   flex-direction: row;
-  background-color: #f53333;
+  background-color: rgb(231, 73, 73);
   width: 100%;
   justify-content: space-between;
   z-index: 2;
@@ -96,8 +91,6 @@ header{
   height: 50px;
 } */
 
-/* Les liens de ce menu déroulant ne sont pas fonctionnels, c'est simplemement pour montrer l'exemple du dropdown mais sans créer les pages qui y sont présentées */
-  
 .menu{
   display: flex;
   justify-content: center;
@@ -106,7 +99,7 @@ header{
 
 .dropbtn {
     margin-top: 5px;
-    background-color: #f53333;
+    background-color: rgb(231, 73, 73);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -144,14 +137,46 @@ header{
     color: #ffffff;
   }
   
-  header a, footer a{
+  header a{
   text-decoration: none;
   color: black;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 a{
   text-decoration: none;
+  color: #e9b937;
+}
+.event a{
+  color: black;
+}
+.texte_premier_article{
+  color: #e9b937;
+  margin: 0 10px 0 10px;
+  text-align: justify;
+}
+
+.premier_article_lien{
+  display: flex;
+  justify-content: space-between;
+}
+.premier_article_lien:hover{
+  font-style: italic;
+}
+
+
+.premier_article{
+  display: flex;
+  margin: 10px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+a:hover{
+  /* background-color: rgba(128, 248, 124, 0.575); */
+  transition: 0.5s;
+  color: white;
+  border-radius: 10px;
 }
 
 .lien_event{
@@ -162,17 +187,21 @@ a{
 main{
   background-image: url(dragon.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
+  background-attachment: fixed;
+  min-height: 45vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+  padding-bottom: 100px;
+  /* flex-direction: column; */
 }
 
 .banniere{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-image: url("banniere.jpg");
+  background-image: url("team_dbz.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -189,13 +218,23 @@ main{
 .actu2{
   border: solid;
   width: 80%;
+  margin-right: 0;
 }
+
+/* .contenu_actu{
+  display: flex;
+  justify-content: center;
+  margin: 50px 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 .contenu_actu2{
   display: flex;
   justify-content: space-around;
-  margin: 50px 10px 50px 10px;
-  width: 89%;
+  margin: 50px 10px;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -209,17 +248,10 @@ main{
 .contenu{
   display: flex;
   justify-content: space-around;
-  margin: 50px 10px 50px 10px;
-  width: 80%;
+  margin: 50px 10px;
+  width: 77%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.premier_article{
-  display: flex;
-  margin: 10px;
-  margin-bottom: 30px;
-  justify-content: space-between;
 }
 
 .site_salon_manga{
@@ -228,15 +260,15 @@ main{
   align-items: center;
 }
 
-.texte_premier_article{
-  color: #e9b937;
-  margin-left: 10px;
-text-align: justify;}
-
-.premier_article_lien{
+/* .image_jeu{
+  width: 90em;
   display: flex;
-  justify-content: space-between;
-}
+} */
+
+/* .episode{
+  color: white;
+font-size: 50px
+} */
 
 /* Les deux liens de salon ne sont pas animés de la même façon, volontairement, pour proposer plusieurs possibilités, au risque que ce ne soit pas cohérent sur ce coup-ci */
 .event{
@@ -263,10 +295,15 @@ text-align: justify;}
   position: relative;
 }
 
+.video{
+  border-radius: 15px;
+}
+
 /* fond opaque + texte au mileu en hover */
 
 img {
    transition: .5s ease;
+   border-radius: 15px;
 }
 
 .visiter {
@@ -316,20 +353,31 @@ h2{
   color: rgb(231, 73, 73);
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 h3{
   display: flex;
+  margin: 0;
+  justify-content: center;
 }
 
 p{
   color: #e9b937;
 }
 
-#fighter{
- max-width: 40%;
+.fighter{
+ max-width: 19em;
+ max-height: 9em;
  height: auto;
+ display: flex;
+ }
+ 
+.super_livre{
+  display: flex;
+  max-width: 19em;
 }
+
 /* 
 #fighter2{
   display: flex;
@@ -346,20 +394,20 @@ p{
 
 footer{
 	background-color: rgb(73, 73, 73);
-  
 }
-i{
-color: red;}
 
-.contenu_actu{
+.rubriques{
   display: flex;
-  justify-content: center;
-  margin: 50px 10px 50px 10px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  flex-direction: column;
 }
 
+i{
+  color: rgb(231, 73, 73);
+font-size: 100%;
+}
+i:hover{
+  color: #1c87c9;
+}
 
 /* page evenement */
 table{
@@ -380,9 +428,28 @@ th, td{
 
 /* page real */
 .contenu_realisation{
-  width: 90%;
+  width: 82%;
   display: flex;
 }
+.article_real{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.texte_real{
+  color: #e9b937;
+  margin: 20px 10px;
+  text-align: justify;
+}
+
+.article_real img{
+  width: 80%;
+}
+
 /* fin page real */
 
 /* 
@@ -405,7 +472,10 @@ tr:nth-child(even) {
 }
 
 .gras > th{
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(70, 33, 2);
+  color: rgb(231, 73, 73);
   /* color: rgb(121, 17, 98); */
   font-family: comic sans ms;
   font-size: xx-large;
@@ -416,18 +486,234 @@ width: 90%;
 } */
 /* fin page event */
 
+/* personnages */
+
+.container {
+  position: absolute;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 90s infinite forwards linear;
+}
+.carousel_face { 
+  position: absolute;
+  width: 80%;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  display: flex;
+  border-radius: 10px;
+}
+
+span {
+  margin: auto auto 5px auto;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(70, 33, 2);
+  text-align: center;
+  color: #e9b937;
+}
+
+.carousel_face:nth-child(1) {
+  background-image: url("goku.jpg");
+  transform: rotateY(  0deg) translateZ(430px); 
+  opacity: 0.5;
+}
+.carousel_face:nth-child(2) { 
+  background-image: url("vegeta.jpg");
+  transform: rotateY( 36deg) translateZ(430px); 
+  opacity: 0.5;
+  }
+.carousel_face:nth-child(3) {
+  background-image: url("gohan.jpg");
+  transform: rotateY( 72deg) translateZ(430px);
+  opacity: 0.5; 
+  }
+.carousel_face:nth-child(4) {
+  background-image: url("piccolo.jpg");
+  transform: rotateY(108deg) translateZ(430px); 
+  opacity: 0.5;
+}
+.carousel_face:nth-child(5) { 
+  background-image: url("krillin.jpg");
+ transform: rotateY(144deg) translateZ(430px);
+ opacity: 0.5; 
+}
+.carousel_face:nth-child(6) { 
+  background-image: url("tortue.jpg");
+ transform: rotateY(180deg) translateZ(430px);
+ opacity: 0.5; 
+}
+.carousel_face:nth-child(7) { 
+  background-image: url("ten.jpg");
+ transform: rotateY(216deg) translateZ(430px); 
+ opacity: 0.5;
+}
+.carousel_face:nth-child(8) {
+  background-image: url("boubou.jpg");
+  transform: rotateY(252deg) translateZ(430px); 
+  opacity: 0.5;
+}
+.carousel_face:nth-child(9) {
+  background-image: url("c17.jpg");
+  transform: rotateY(288deg) translateZ(430px);
+  opacity: 0.5; 
+}
+.carousel_face:nth-child(10) {
+  background-image: url("c18.jpg");
+  transform: rotateY(324deg) translateZ(430px); 
+  opacity: 0.5;
+}
+
+.carousel_face:nth-child(1):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(2):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(3):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(4):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(5):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(6):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(7):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(8):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(9):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.carousel_face:nth-child(10):hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.perso_responsive{
+  display: none;
+}
+/* fin personnages */
+
 
 @media screen and (max-width:750px) {
+
   .contenu{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .contenu_realisation{
+    flex-direction: column;
+  }
+  .texte_real{
+    margin: 0px 10px;
+  }
+
   .actu{
     margin-bottom: 10px;
     width: 80%;
+    margin-right: 0;
   }
   .event{
     width: 80%;
   }
+  .tableau{
+    margin: 0px 10px;
+  }
+  .logo{
+    display: flex;
+justify-content: center;  
 }
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+  .menu{
+    flex-direction: column;
+    align-items: center;
+  }
+.rechercher{
+  display: none;
+}
+.premier_article{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.texte_premier_article{
+  display: flex;
+  flex-direction: column;
+  color: #e9b937;
+  margin: 0 10px;
+  text-align: justify;
+}
+
+  .premier_article_lien{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.perso{
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  display: none;
+}
+
+.perso_responsive{
+  display: flex;
+}
+.perso_responsive h3{
+  align-items: center;
+}
+.fighter{
+  margin: auto;
+}
+
+
+/* h3{
+    justify-content: center;
+  } */
+}
+
